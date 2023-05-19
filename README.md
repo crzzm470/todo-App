@@ -73,15 +73,14 @@ Respuesta exitosa
   },
   ...
 ]
-
-  ```
+```
   
  Respuesta de error
  ```bash
   Status: 500 Internal Server Error
-  ```
+ ```
   
-  ```javascript
+```javascript
   {
   "error": "Ocurrió un error al obtener las tareas pendientes",
   "message": "Mensaje de error detallado"
@@ -91,7 +90,7 @@ Respuesta exitosa
 Crear una tarea
 ```bash
   POST /tasks
-  ```
+```
   
 Este endpoint crea una nueva tarea con la información proporcionada en el cuerpo de la solicitud.
 
@@ -108,8 +107,8 @@ Este endpoint crea una nueva tarea con la información proporcionada en el cuerp
 Respuesta exitosa
 ```bash
  Status: 201 Created
-  ```
-  ```javascript
+```
+```javascript
   {
   "id": 1,
   "title": "Tarea 1",
@@ -117,15 +116,14 @@ Respuesta exitosa
   "dueDate": "2023-05-20",
   "completed": false
 }
-
 ```
 
 Respuesta de error
 ```bash
  Status: 500 Internal Server Error
-  ```
+```
   
- ```javascript
+```javascript
  {
   "error": "Ocurrió un error al crear la tarea"
 }
@@ -134,7 +132,7 @@ Respuesta de error
 Obtener una tarea por ID
 ```bash
 GET /tasks/:id
-  ```
+```
   
   Este endpoint devuelve la tarea correspondiente al ID proporcionado.
 
@@ -148,9 +146,9 @@ Respuesta exitosa
 
 ```bash
 Status: 200 OK
-  ```
+```
   
-   ```javascript
+```javascript
 {
   "id": 1,
   "title": "Tarea 1",
@@ -163,15 +161,15 @@ Status: 200 OK
 Respuesta de error
   ```bash
   Status: 500 Internal Server Error
-    ```
+  ```
   ```javascript
   {
     "error": "Ocurrió un error al obtener la tarea"
   }
   ```
-    ```bash
+  ```bash
   Status: 404 Not Found
-    ```
+  ```
   ```javascript
   {
     "error": "La tarea no existe"
@@ -180,7 +178,7 @@ Respuesta de error
 Actualizar una tarea
 ```bash
 PUT /tasks/:id
-  ```
+```
   
 Este endpoint actualiza la tarea correspondiente al ID proporcionado con la información proporcionada en el cuerpo de la solicitud.
 
@@ -196,7 +194,7 @@ Parámetros de entrada
 Respuesta exitosa
 ```bash
 Status: 200 OK
-  ```
+```
 
 ```javascript
 {
@@ -220,7 +218,7 @@ Status: 500 Internal Server Error
 ```
 ```bash
 Status: 404 Not Found
-  ```
+```
 ```javascript
 {
   "error": "La tarea no existe"
@@ -230,7 +228,7 @@ Eliminar una tarea
 
 ```bash
 DELETE /tasks/:id
-  ```
+```
 
 Este endpoint elimina la tarea correspondiente al ID proporcionado.
 
@@ -243,34 +241,34 @@ Parámetros de entrada
 Respuesta exitosa
 ```bash
 Status: 200 OK
-  ```
-  ```javascript
+```
+```javascript
 {
   "message": "Tarea eliminada exitosamente"
 }
-  ```
+```
 Respuesta de error
-  ```bash
+```bash
 Status: 500 Internal Server Error
-  ```
-  ```javascript
+```
+```javascript
 {
   "error": "Ocurrió un error al eliminar la tarea"
 }
-  ```
-  ```bash
+```
+```bash
 Status: 404 Not Found
-  ```
-  ```javascript
+```
+```javascript
 {
   "error": "La tarea no existe"
 }
-  ```
+```
 
 Obtener todas las tareas
-  ```bash
+```bash
 GET /tasks
-  ```
+```
 Este endpoint devuelve una lista de todas las tareas.
 
 Respuesta exitosa
