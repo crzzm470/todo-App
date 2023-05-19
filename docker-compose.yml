@@ -8,13 +8,25 @@ services:
       - 3000:3000
     depends_on:
       - db
-    env_file:
-      - .env
     command: sh -c "npm run migrate && npm start"
-
+    networks:
+      - todo-network
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_HOST=${DB_HOST}
+      - DB_DATABASE=${DB_DATABASE}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_PORT=${DB_PORT}
   db:
     image: postgres:latest
-    env_file:
-      - .env
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_DATABASE}
     ports:
-      - 5432:5432
+      - ${DB_PORT}:5432
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
